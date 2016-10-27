@@ -42,7 +42,7 @@ make install
 
 ```
 module(load="mmgrok")
-action(type="mmgrok" patterndir="path/to/yourpatternsDir" match="%{WORD:test}" soure="msg" target="!msg")
+action(type="mmgrok" patterndir="path/to/yourpatternsDir" match="%{WORD:test}" source="msg" target="!msg")
 template(name="tmlp" type="string" string="%$!msg!test%\n")
 action(type="omfile"  file="path/to/file" template="tmlp")
 ```
